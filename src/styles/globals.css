@@ -24,6 +24,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    background-color: #ffffff; 
 }
 
 @layer utilities {
@@ -31,3 +32,28 @@ body {
     text-wrap: balance;
   }
 }
+
+/* styles/globals.css */
+
+/* Ensure the background image covers the entire viewport and remains fixed */
+.bg-cover {
+  background-size: cover;
+}
+
+/* Center the background image */
+.bg-center {
+  background-position: center;
+}
+
+/* Adjust z-index to ensure the background image remains behind other content */
+.z-0 {
+  z-index: 0;
+}
+
+#anchoredCtaWeb {
+  position: sticky;
+  transform: translateY(50px);
+  opacity: 10;
+  top: 10px;
+}
+
