@@ -18,6 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  padding-bottom: 60px;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -55,5 +56,10 @@ body {
   transform: translateY(50px);
   opacity: 10;
   top: 10px;
+}
+
+.container {
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto; /* Center the container horizontally */
 }
 

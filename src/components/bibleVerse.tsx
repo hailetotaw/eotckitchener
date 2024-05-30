@@ -18,9 +18,9 @@ const BibleVerse: React.FC<BibleVerseProps> = ({
   return (
     <div
       id="bible-verse"
-      className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full"
+      className="flex items-center justify-center h-screen w-full"
     >
-      <div className="bg-black bg-opacity-50 p-4 rounded-lg mx-auto text-center">
+      <div className="bg-black bg-opacity-50 p-4 rounded-lg text-center w-full max-w-screen-lg">
         <p className="text-white font-bold text-xl">
           {book} {chapter}:{verse}
         </p>

@@ -1,5 +1,6 @@
 import BackgroundImage from "@/components/backgroundImage";
 import BibleVerse from "@/components/bibleVerse";
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import WelcomeMessage from "@/components/welcomeMessage";
 import React from "react";
@@ -10,15 +11,18 @@ const Home: React.FC = () => {
       <Navbar />
       <BackgroundImage />
       <div className="relative z-10 p-8">
-        <BibleVerse
-          book="John"
-          chapter={3}
-          verse={16}
-          text="For God so loved the world..."
-        />
-        <div className="absolute mt-16">
-          <WelcomeMessage />
+        <div className="container">
+          <BibleVerse
+            book="John"
+            chapter={3}
+            verse={16}
+            text="For God so loved the world..."
+          />
+          <div className="mt-16">
+            <WelcomeMessage />
+          </div>
         </div>
+
         {/* Placeholder content to enable scrolling 
         <div className="mt-16">
           <p className="text-black text-lg">
@@ -38,6 +42,7 @@ const Home: React.FC = () => {
           </p>
         </div>*/}
       </div>
+      <Footer />
     </div>
   );
 };
