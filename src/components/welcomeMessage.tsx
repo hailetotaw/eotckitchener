@@ -23,7 +23,7 @@ const WelcomeMessage: React.FC = () => {
           worship and community activities. The church offers weekly services,
           including the Holy Communion, Holy Table, and spiritual counseling,
           which are cornerstones of the Ethiopian Orthodox faith. The church
-          also emphasizes the importance of youth and children's spiritual
+          also emphasizes the importance of youth and children&apos;s spiritual
           development, offering dedicated services and programs to nurture the
           younger members of the congregation. Through the commitment of its
           members and the grace of God, Debre Sina Kidan Mehret Ethiopian
