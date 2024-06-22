@@ -16,7 +16,7 @@ const Home: React.FC = () => {
             book="John"
             chapter={3}
             verse={16}
-            text="For God so loved the world..."
+            text="For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."
           />
           <div className="mt-16">
             <WelcomeMessage />
