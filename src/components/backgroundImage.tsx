@@ -15,10 +15,11 @@ const BackgroundImage: React.FC = () => {
     //   className="absolute inset-0 bg-cover bg-center h-screen"
     //   style={{ backgroundImage: "url('/background-image.jpeg')" }}
     // ></div>
-    <div
-      className="fixed top-16 inset-0 bg-cover bg-center h-screen"
-      style={{ backgroundImage: "url('/background-image.jpeg')" }}
-    ></div>
+    // <div
+    //   className="fixed top-16 inset-0 bg-cover bg-center h-screen"
+    //   style={{ backgroundImage: "url('/background-image.jpeg')" }}
+    // ></div>
+    <div className="background-image"></div>
   );
 };
 

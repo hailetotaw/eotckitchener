@@ -4,12 +4,15 @@ import React from "react";
 
 const WelcomeMessage: React.FC = () => {
   return (
-    <div className="p-8">
-      <div className="bg-white bg-opacity-70 p-8 shadow-md rounded-lg">
+    <div
+      className="relative z-10 flex flex-col items-center justify-center h-screen"
+      id="about"
+    >
+      <div className="w-full bg-white bg-opacity-70 p-8 shadow-md rounded-lg">
         <h2 className="text-black text-2xl font-bold">
           Welcome to Debre Sina Kidan Mehret Ethiopian Orthodox Church
         </h2>
-        <p className="text-gray-800 mb-4 pt-4">
+        <p className="text-gray-800 mb-4 pt-4 text-justify">
           The Debre Sina Kidan Mehret Ethiopian Orthodox Church began its
           journey in the year 2000, supported by the St. Mary Ethiopian Orthodox
           Church in Toronto. This collaboration marked the beginning of a
@@ -17,7 +20,7 @@ const WelcomeMessage: React.FC = () => {
           cultural traditions of the Ethiopian Orthodox Tewahedo faith in
           Canada.
         </p>
-        <p className="text-gray-800 mb-4">
+        <p className="text-gray-800 mb-4 pt-4 text-justify">
           In 2016, a significant milestone was achieved when the church acquired
           its own property at 1248 Kramp Road, Breslau, Ontario. This
           acquisition provided a permanent home for the congregation, allowing
@@ -25,7 +28,7 @@ const WelcomeMessage: React.FC = () => {
           Kidan Mehret Ethiopian Orthodox Church has been a vibrant center of
           worship and community activities.
         </p>
-        <p className="text-gray-800 mb-4">
+        <p className="text-gray-800 mb-4 pt-4 text-justify">
           The church offers weekly services, including the Holy Communion, Holy
           Table, and spiritual counseling, which are cornerstones of the
           Ethiopian Orthodox faith. The church also emphasizes the importance of

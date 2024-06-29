@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation("common");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -24,12 +26,14 @@ const Navbar: React.FC = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link href="/">
-                <div className="text-gray-800 hover:text-gray-600">Home</div>
+                <div className="text-gray-800 hover:text-gray-600">
+                  {t("navbar.home")}
+                </div>
               </Link>
-              <Link href="/about">
+              <Link href="#about">
                 <div className="text-gray-800 hover:text-gray-600">About</div>
               </Link>
-              <Link href="/contact">
+              <Link href="#contactUs">
                 <div className="text-gray-800 hover:text-gray-600">Contact</div>
               </Link>
             </div>
@@ -64,12 +68,12 @@ const Navbar: React.FC = () => {
                 Home
               </div>
             </Link>
-            <Link href="/about">
+            <Link href="#about">
               <div className="block text-gray-800 hover:text-gray-600">
                 About
               </div>
             </Link>
-            <Link href="/contact">
+            <Link href="#contactUs">
               <div className="block text-gray-800 hover:text-gray-600">
                 Contact
               </div>

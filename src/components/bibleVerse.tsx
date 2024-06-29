@@ -17,14 +17,14 @@ const BibleVerse: React.FC<BibleVerseProps> = ({
 }) => {
   return (
     <div
-      id="bible-verse"
-      className="flex items-center justify-center h-screen w-full"
+      className="relative z-10 flex flex-col items-center justify-center h-screen"
+      id="home"
     >
-      <div className="bg-black bg-opacity-50 p-4 rounded-lg text-center w-full max-w-screen-lg">
-        <p className="text-white font-bold text-xl">
+      <div className="w-full bg-black bg-opacity-50 text-white p-6">
+        <p className="text-white font-bold text-xl text-center">
           {book} {chapter}:{verse}
         </p>
-        <p className="text-white">{text}</p>
+        <p className="text-white text-center">{text}</p>
       </div>
     </div>
   );
