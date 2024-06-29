@@ -19,13 +19,14 @@
 body {
   color: rgb(var(--foreground-rgb));
   padding-bottom: 60px;
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-    background-color: #ffffff; 
+    background-color: #ffffff;  */
+    background: url('/background-image.jpeg') no-repeat center center fixed;
 }
 
 @layer utilities {
@@ -65,9 +66,11 @@ body {
 
 .background-image {
   position: fixed;
+  /* top: 0;
+  left: 0; */
   width: 100%;
   height: 100vh; /* Adjust height as needed */
-  background: url('/background-image.jpeg') no-repeat center center fixed;
+  /* background: url('/background-image.jpeg') no-repeat center center fixed; */
   background-size: cover;
   z-index: -1; /* Ensure it is behind other content */
 }
