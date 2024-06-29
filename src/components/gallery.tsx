@@ -39,7 +39,7 @@ const Gallery: React.FC = () => {
                 key={index}
                 src={image}
                 alt={`Gallery image ${index + 1}`}
-                className="w-48 h-48 object-cover cursor-pointer"
+                className="w-48 h-48 object-cover cursor-pointer sm:w-48 sm:h-48"
                 // onClick={() => openModal(image)}
               />
             ))}
