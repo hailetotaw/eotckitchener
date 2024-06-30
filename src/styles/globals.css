@@ -52,13 +52,6 @@ body {
   z-index: 0;
 }
 
-#anchoredCtaWeb {
-  position: sticky;
-  transform: translateY(50px);
-  opacity: 10;
-  top: 10px;
-}
-
 .container {
   max-width: 1200px; /* Adjust as needed */
   margin: 0 auto; /* Center the container horizontally */
