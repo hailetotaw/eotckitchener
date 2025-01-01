@@ -26,7 +26,7 @@ body {
     )
     rgb(var(--background-start-rgb));
     background-color: #ffffff;  */
-    background: url('/background-image.jpeg') no-repeat center center fixed;
+    /* background: url('/background-image.jpeg') no-repeat center center fixed; */
 }
 
 @layer utilities {
@@ -63,7 +63,7 @@ body {
   left: 0; */
   width: 100%;
   height: 100vh; /* Adjust height as needed */
-  /* background: url('/background-image.jpeg') no-repeat center center fixed; */
+  background: url('/background-image.jpeg') no-repeat center center fixed; 
   background-size: cover;
   z-index: -1; /* Ensure it is behind other content */
 }
@@ -75,7 +75,6 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Change the color and opacity as needed */
   z-index: 1;
 }
 
