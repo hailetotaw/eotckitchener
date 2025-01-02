@@ -1,22 +1,38 @@
 // components/WelcomeMessage.tsx
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const images = [
-  "/gallery/image1.jpeg",
-  "/gallery/image2.jpeg",
-  "/gallery/image3.jpeg",
-  "/gallery/image1.jpeg",
-  "/gallery/image2.jpeg",
-  "/gallery/image1.jpeg",
-  "/gallery/image2.jpeg",
-  "/gallery/image3.jpeg",
-  "/gallery/image1.jpeg",
-  "/gallery/image2.jpeg",
-];
+type Image = {
+  id: string;
+  url: string;
+  createdAt: string;
+};
+
+// const images = [
+//   "/gallery/image1.jpeg",
+//   "/gallery/image2.jpeg",
+//   "/gallery/image3.jpeg",
+//   "/gallery/image1.jpeg",
+//   "/gallery/image2.jpeg",
+//   "/gallery/image1.jpeg",
+//   "/gallery/image2.jpeg",
+//   "/gallery/image3.jpeg",
+//   "/gallery/image1.jpeg",
+//   "/gallery/image2.jpeg",
+// ];
 
 const Gallery: React.FC = () => {
+  const [images, setImages] = useState<Image[]>([]);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const getImages = async () => {
+      const res = await fetch("/api/gallery");
+      const data = await res.json();
+      setImages(data.images);
+    };
+    getImages();
+  }, []);
 
   const openModal = (image: string) => {
     setSelectedImage(image);
@@ -37,7 +53,7 @@ const Gallery: React.FC = () => {
             {images.map((image, index) => (
               <img
                 key={index}
-                src={image}
+                src={image.url}
                 alt={`Gallery image ${index + 1}`}
                 className="w-48 h-48 object-cover cursor-pointer sm:w-48 sm:h-48"
                 // onClick={() => openModal(image)}

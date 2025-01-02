@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "formidable": "^3.5.2",
+    "lucide-react": "^0.469.0",
     "next": "14.2.3",
     "nodemailer": "^6.9.14",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/formidable": "^3.4.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
