@@ -31,13 +31,13 @@ const Navbar: React.FC = () => {
                 </div>
               </Link>
               <Link href="#about">
-                <div className="text-gray-800 hover:text-gray-600">About</div>
+                <div className="text-gray-800 hover:text-gray-600">{t("navbar.about")}</div>
               </Link>
               <Link href="#gallery">
-                <div className="text-gray-800 hover:text-gray-600">Gallery</div>
+                <div className="text-gray-800 hover:text-gray-600">{t("navbar.gallery")}</div>
               </Link>
               <Link href="#contactUs">
-                <div className="text-gray-800 hover:text-gray-600">Contact</div>
+                <div className="text-gray-800 hover:text-gray-600">{t("navbar.contact")}</div>
               </Link>
             </div>
           </div>

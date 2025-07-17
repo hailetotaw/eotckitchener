@@ -1,6 +1,7 @@
 // components/WelcomeMessage.tsx
 
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 type Image = {
   id: string;
@@ -23,6 +24,7 @@ type Image = {
 
 const Gallery: React.FC = () => {
   const [images, setImages] = useState<Image[]>([]);
+  const [index,  setIndex]  = useState<number | null>(null);   // ➊ now store *index*
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
@@ -33,6 +35,23 @@ const Gallery: React.FC = () => {
     };
     getImages();
   }, []);
+
+  /* ───── helpers ───── */
+  const close  = () => setIndex(null);
+  const next   = () => setIndex((i) => (i! + 1) % images.length);
+  const prev   = () => setIndex((i) => (i! - 1 + images.length) % images.length);
+
+  /* ESC / Arrow‑key listeners */
+  useEffect(() => {
+    if (index === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape")      close();
+      else if (e.key === "ArrowRight") next();
+      else if (e.key === "ArrowLeft")  prev();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [index, images.length]);
 
   const openModal = (image: string) => {
     setSelectedImage(image);
@@ -56,12 +75,12 @@ const Gallery: React.FC = () => {
                 src={image.url}
                 alt={`Gallery image ${index + 1}`}
                 className="w-48 h-48 object-cover cursor-pointer sm:w-48 sm:h-48"
-                // onClick={() => openModal(image)}
+                onClick={() => setIndex(index)}
               />
             ))}
           </div>
 
-          {selectedImage && (
+          {/* {selectedImage && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
               <div className="relative">
                 <img
@@ -77,7 +96,33 @@ const Gallery: React.FC = () => {
                 </button>
               </div>
             </div>
-          )}
+          )} */}
+          {index !== null &&
+        createPortal(
+          <div
+            onClick={close}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+          >
+            <div
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-[90vw] max-h-[90vh]"
+            >
+              <img
+                  src={images[index].url}
+                  alt="Selected"
+                  className="max-w-full max-h-full"
+                />
+              <button
+                onClick={close}
+                className="absolute -right-3 -top-3 rounded-full bg-gray p-1 shadow"
+                aria-label="Close"
+              >
+                ✕
+              </button>
+            </div>
+          </div>,
+          document.body
+        )}
         </div>
       </div>
     </div>
