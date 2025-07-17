@@ -3,6 +3,11 @@
     "title": "it is working",
     "home": "Home",
     "about": "About",
-    "contact": "Contact Us"
+    "contact": "Contact Us",
+    "gallery": "Gallery"
+  },
+  "home":{
+    "book":"John",
+    "verse":"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."
   }
 }

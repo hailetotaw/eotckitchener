@@ -2,7 +2,12 @@
   "navbar": {
     "title": "My Church",
     "home": "መነሻ ገጽ",
-    "about": "About",
-    "contact": "Contact"
+    "about": "ስለ እኛ",
+    "contact": "አግኙን",
+    "gallery": "ምስሎች"
+  },
+  "home":{
+    "book":"የዮሐንስ ወንጌል",
+    "verse":" በእርሱ የሚያምን ሁሉ የዘላለም ሕይወት እንዲኖረው እንጂ እንዳይጠፋ እግዚአብሔር አንድያ ልጁን እስኪሰጥ ድረስ ዓለሙን እንዲሁ ወዶአልና።"
   }
 }

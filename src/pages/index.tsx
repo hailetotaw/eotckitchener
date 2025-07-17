@@ -5,18 +5,21 @@ import Footer from "@/components/footer";
 import Gallery from "@/components/gallery";
 import Navbar from "@/components/navbar";
 import WelcomeMessage from "@/components/welcomeMessage";
+import useTranslation from "next-translate/useTranslation";
 import React from "react";
 
 const Home: React.FC = () => {
+  const { t } = useTranslation("common");
+  
   return (
     <>
       <Navbar />
       <BackgroundImage />
       <BibleVerse
-        book="John"
+        book={t("home.book")}
         chapter={3}
         verse={16}
-        text="For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."
+        text={t("home.verse")}
       />
       <WelcomeMessage />
       <Gallery />
